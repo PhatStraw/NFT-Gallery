@@ -3,13 +3,13 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { NFTCard } from "./components/nftCard.tsx"
 
-const Home = () => {
-  const [wallet, setWalletAddress] = useState("");
-  const [collection, setCollectionAddress] = useState("");
-  const [NFTs, setNFTs] = useState([])
-  const [fetchForCollection, setFetchForCollection] = useState(false)
+const Home: React.FC = () => {
+  const [wallet, setWalletAddress] = useState<string>("");
+  const [collection, setCollectionAddress] = useState<string>("");
+  const [NFTs, setNFTs] = useState<any[]>([]);
+  const [fetchForCollection, setFetchForCollection] = useState<boolean>(false);
 
-  const fetchNFTs = async () => {
+  const fetchNFTs = async (): Promise<void> => {
     let nfts;
     console.log("fetching nfts");
     const api_key = "A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM"
@@ -36,7 +36,7 @@ const Home = () => {
   }
 
 
-  const fetchNFTsForCollection = async () => {
+  const fetchNFTsForCollection = async (): Promise<void> => {
     if (collection.length) {
       var requestOptions = {
         method: 'GET'
