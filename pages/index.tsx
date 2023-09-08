@@ -64,7 +64,7 @@ const Home: React.FC = () => {
               fetchNFTsForCollection()
             } else fetchNFTs()
           }
-        }>Let's go! </button>
+        }>Let&apos;s go! </button>
       </div>
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
         {
