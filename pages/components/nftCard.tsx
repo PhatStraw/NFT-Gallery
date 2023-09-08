@@ -1,6 +1,5 @@
-
-export const NFTCard = ({ nft }: any) => {
-
+import * as React from "react"
+export default function NFTCard({ nft }: any){
     return (
         <div className="w-1/4 flex flex-col ">
         <div className="rounded-md">
