@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 // @ts-ignore
-import {NFTCard} from "./components/nftCard.tsx"
+import NFTCard from "./components/nftCard.tsx"
 
 const Home: React.FC = () => {
   const [wallet, setWalletAddress] = useState<string>("");
