@@ -70,7 +70,7 @@ const Home: React.FC = () => {
         {
           NFTs.length && NFTs.map(nft => {
             return (
-              <NFTCard nft={nft}></NFTCard>
+              <NFTCard key={nft.name} nft={nft}></NFTCard>
             )
           })
         }
